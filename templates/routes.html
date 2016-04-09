@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+{{template "_head.html" .Title}}
+{{template "_header.html" .Active}}
+<body>
+	<div class="main routes_main">
+		<ul style="-webkit-padding-start:0;-webkit-margin-before: 0;-webkit-margin-after: 0;">
+			{{range .Routes}}
+				 <li>
+				 	<a href='/route/{{.Id}}'>
+					 	<div class='route_li'>
+					 		<div class='route_title'>{{.Title}}</div>
+					 		<div class='route_desc'>({{.Description}})</div>
+					 		<div class='route_img'><img src="/img/{{.ImageUrl}}" width="120px" height="100px" /></div>
+					 	</div>
+				 	</a>
+				 </li>
+				
+			{{end}}	   
+		</ul>
+	</div>
+</body>
+</html>
